@@ -5,8 +5,7 @@
     <classes>
       <class name="testScripts.TestPages">
         <methods>
-          <include name="setup"/>
-          <include name="publishArticleTest"/>
+          <include name="editArticleTest"/>
         </methods>
       </class> <!-- testScripts.TestPages -->
     </classes>

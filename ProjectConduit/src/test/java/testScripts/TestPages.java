@@ -2,7 +2,6 @@ package testScripts;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import base.TestBase;
 import pages.Article;
@@ -14,7 +13,7 @@ public class TestPages {
 	LoginPage login;
 	Article newArt;
 	
-	@BeforeTest
+	@Test
 	public void setup() {
 		TestBase.initDriver();
 		driver=TestBase.getDriver();
@@ -37,21 +36,21 @@ public class TestPages {
 	}
 	
 	
-	//@Test(priority=3)
-	//public void editArticleTest() {
-		//newArt.publishArticle("ganesh", "My First Article edit", "Testing purpose edit", "#gowthu");
-		//Assert.assertTrue(newArt.isArticlePublished());
-//	}
+	@Test(priority=3)
+	public void editArticleTest() {
+		newArt.publishArticle("ganesh", "My First Article edit", "Testing purpose edit", "#ganesh");
+		Assert.assertTrue(newArt.isArticlePublished());
+	}
 	
 	//@Test(priority=4)
 	
 	//public void deleteArticleTest() {
-	//	newArt.deleteArticle();
+		//newArt.deleteArticle();
 	//}
 	//@AfterTest
 	//public void closeApp() {
-	//	TestBase.tearDown();
-//	}
+	//	TestBase.tearDown();	
+		//}
 
 	
 	

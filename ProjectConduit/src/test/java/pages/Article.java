@@ -26,20 +26,20 @@ public class Article {
 	@FindBy(css="input[placeholder=\"What's this article about?\"]")
 	WebElement about;
 	
-	@FindBy(css="textarea[placeholder='write your article (in markdown)']")
+	@FindBy(css="textarea[placeholder='Write your article (in markdown)']")
 	WebElement content;
 	
 	@FindBy(css="input[placeholder='Enter tags']")
 	WebElement tags;
 	
-	@FindBy(xpath="//button(contains(text(), \"publish Article\")]")
+	@FindBy(xpath="//button[contains(text(), 'Publish Article')]")
 	WebElement pubBtn;
 	
-	@FindBy(xpath="//*[@Id=\"root\"]/main/div/div[2]/div[2]/div/button[2]/a/text()")
+	@FindBy(css="a.nav-link")
 	WebElement editArticle;
 	
 	
-	@FindBy(xpath="//*[@id=\"root\"]/main/div/div[2]/div[2]/div/button[1]")
+	@FindBy(xpath="//button[contains(text(), 'Delete Article')]")
 	WebElement deleteArticle;
 
 
